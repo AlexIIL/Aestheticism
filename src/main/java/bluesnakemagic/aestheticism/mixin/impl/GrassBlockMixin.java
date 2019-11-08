@@ -10,6 +10,9 @@ import net.minecraft.block.SpreadableBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import bluesnakemagic.aestheticism.AestheticismBlocks;
+import bluesnakemagic.aestheticism.block.MoistDirtBlock;
+
 @Mixin(GrassBlock.class)
 public abstract class GrassBlockMixin extends SpreadableBlock {
 
@@ -19,7 +22,17 @@ public abstract class GrassBlockMixin extends SpreadableBlock {
 
     @Override
     public void onScheduledTick(BlockState state, World world, BlockPos pos, Random rand) {
-        // TODO Auto-generated method stub
-        throw new AbstractMethodError("// TODO: Implement this!");
+        super.onScheduledTick(state, world, pos, rand);
+        if (world.isClient) {
+            return;
+        }
+        state = world.getBlockState(pos);
+        if (state.getBlock() == this) {
+            if (MoistDirtBlock.isWaterNearby(world, pos)) {
+                BlockState newState = AestheticismBlocks.MOIST_GRASS.getDefaultState();
+                newState = newState.with(MoistDirtBlock.MOISTURE, 7);
+                world.setBlockState(pos, newState, 2);
+            }
+        }
     }
 }

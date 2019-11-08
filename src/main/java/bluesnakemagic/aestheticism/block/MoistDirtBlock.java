@@ -38,6 +38,9 @@ public class MoistDirtBlock extends Block {
     @Override
     public void onScheduledTick(BlockState state, World world, BlockPos pos, Random rand) {
         super.onScheduledTick(state, world, pos, rand);
+        if (world.isClient) {
+            return;
+        }
         int moistness = state.get(MOISTURE);
         if (!isWaterNearby(world, pos) && !world.hasRain(pos.up())) {
             if (moistness > 1) {
