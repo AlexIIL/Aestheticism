@@ -1,0 +1,32 @@
+{
+    "schemaVersion": 1,
+    "id": "aestheticism",
+    "name": "Aestheticism",
+    "description": "Full 3D models for current 2d blocks, and a few other small visual tweaks.",
+    "version": "$version",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "bluesnakemagic.aestheticism.AestheticismMain"
+        ],
+        "client": [
+            "bluesnakemagic.aestheticism.AestheticismClient"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.4.0",
+        "fabric": "*"
+    },
+    "mixins": [
+        "aestheticism.common.json"
+    ],
+    "custom": {
+    },
+    "icon": "assets/aestheticism/icon.png",
+    "authors": [
+        "BlueSnakeMagic",
+        "AlexIIL",
+        "UpcraftLP"
+    ],
+    "license": "to be decided"
+}
