@@ -1,0 +1,8 @@
+{
+    "parent": "aestheticism:block/muddy_grass_base",
+    "textures": {
+        "particle": "block/dirt",
+        "top": "aestheticism:block/muddy_grass_block/top_3",
+        "side": "aestheticism:block/muddy_dirt_block/side_3"
+    }
+}

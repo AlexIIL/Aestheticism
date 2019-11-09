@@ -12,7 +12,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import bluesnakemagic.aestheticism.AestheticismBlocks;
-import bluesnakemagic.aestheticism.block.MoistDirtBlock;
+import bluesnakemagic.aestheticism.block.MuddyDirtBlock;
 
 @Mixin(GrassBlock.class)
 public abstract class GrassBlockMixin extends SpreadableBlock {
@@ -29,10 +29,10 @@ public abstract class GrassBlockMixin extends SpreadableBlock {
         }
         state = world.getBlockState(pos);
         if (state.getBlock() == Blocks.GRASS_BLOCK) {
-            double max = MoistDirtBlock.getMoistness(world, pos);
+            double max = MuddyDirtBlock.getMoistness(world, pos);
             if (max > 0 || world.hasRain(pos.up())) {
-                BlockState newState = AestheticismBlocks.MOIST_GRASS.getDefaultState();
-                newState = newState.with(MoistDirtBlock.MOISTURE, 1);
+                BlockState newState = AestheticismBlocks.MUDDY_GRASS.getDefaultState();
+                newState = newState.with(MuddyDirtBlock.MOISTURE, 1);
                 world.setBlockState(pos, newState, 2);
             }
         }

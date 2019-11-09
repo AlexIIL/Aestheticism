@@ -2,7 +2,6 @@
     "parent": "minecraft:block/block",
     "textures": {
         "particle": "block/dirt",
-        "bottom": "block/dirt",
         "top": "block/grass_block_top",
         "side": "block/grass_block_side",
         "side_overlay": "block/grass_block_side_overlay"
@@ -12,7 +11,7 @@
             "from": [ 0, 0, 0 ],
             "to": [ 16, 16, 16 ],
             "faces": {
-                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "cullface": "down" },
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "down" },
                 "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#side",   "cullface": "north" },
                 "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side",   "cullface": "south" },
                 "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side",   "cullface": "west" },

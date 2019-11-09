@@ -15,7 +15,7 @@ public class AestheticismClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockColorProvider mapper = AestheticismClient::getGrassColour;
-        ColorProviderRegistry.BLOCK.register(mapper, AestheticismBlocks.MOIST_GRASS);
+        ColorProviderRegistry.BLOCK.register(mapper, AestheticismBlocks.MUDDY_GRASS);
     }
 
     private static int getGrassColour(BlockState state, ExtendedBlockView view, BlockPos pos, int tint) {

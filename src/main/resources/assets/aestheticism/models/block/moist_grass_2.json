@@ -1,9 +1,0 @@
-{
-    "parent": "aestheticism:block/moist_grass_base",
-    "textures": {
-        "particle": "block/dirt",
-        "bottom": "aestheticism:block/moist_grass_block/bottom_2",
-        "top": "aestheticism:block/moist_grass_block/top_2",
-        "side": "aestheticism:block/moist_grass_block/side_2"
-    }
-}
