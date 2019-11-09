@@ -7,7 +7,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "bluesnakemagic.aestheticism.AestheticismMain"
+            "bluesnakemagic.aestheticism.Aestheticism"
         ],
         "client": [
             "bluesnakemagic.aestheticism.AestheticismClient"

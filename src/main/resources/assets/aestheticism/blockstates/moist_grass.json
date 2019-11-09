@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "moisture=7,snowy=false": { "model": "aestheticism:block/moist_grass_7" },
+        "moisture=6,snowy=false": { "model": "aestheticism:block/moist_grass_6" },
+        "moisture=5,snowy=false": { "model": "aestheticism:block/moist_grass_5" },
+        "moisture=4,snowy=false": { "model": "aestheticism:block/moist_grass_4" },
+        "moisture=3,snowy=false": { "model": "aestheticism:block/moist_grass_3" },
+        "moisture=2,snowy=false": { "model": "aestheticism:block/moist_grass_2" },
+        "moisture=1,snowy=false": { "model": "aestheticism:block/moist_grass_1" }
+    }
+}

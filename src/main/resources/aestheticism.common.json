@@ -1,10 +1,11 @@
 {
-  "required": true,
-  "package": "bluesnakemagic.aestheticism.mixin.impl",
-  "compatibilityLevel": "JAVA_8",
-  "mixins": [
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+    "required": true,
+    "package": "bluesnakemagic.aestheticism.mixin.impl",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "GrassBlockMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
 }

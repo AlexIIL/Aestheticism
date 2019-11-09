@@ -5,6 +5,7 @@ import java.util.Random;
 import org.spongepowered.asm.mixin.Mixin;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.GrassBlock;
 import net.minecraft.block.SpreadableBlock;
 import net.minecraft.util.math.BlockPos;
@@ -27,10 +28,11 @@ public abstract class GrassBlockMixin extends SpreadableBlock {
             return;
         }
         state = world.getBlockState(pos);
-        if (state.getBlock() == this) {
-            if (MoistDirtBlock.isWaterNearby(world, pos)) {
+        if (state.getBlock() == Blocks.GRASS_BLOCK) {
+            double max = MoistDirtBlock.getMoistness(world, pos);
+            if (max > 0 || world.hasRain(pos.up())) {
                 BlockState newState = AestheticismBlocks.MOIST_GRASS.getDefaultState();
-                newState = newState.with(MoistDirtBlock.MOISTURE, 7);
+                newState = newState.with(MoistDirtBlock.MOISTURE, 1);
                 world.setBlockState(pos, newState, 2);
             }
         }
