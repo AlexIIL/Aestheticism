@@ -19,8 +19,14 @@ public class BlocksMixin {
         method = "<clinit>",
         at = @At(value = "NEW", ordinal = 0),
         slice = @Slice(
-            from = @At(value = "FIELD", target = "Lnet/minecraft/sound/BlockSoundGroup;GRASS", ordinal = 0),
-            to = @At(value = "FIELD", target = "Lnet/minecraft/sound/BlockSoundGroup;GRAVEL", ordinal = 1)),
+            from = @At(
+                value = "FIELD",
+                target = "Lnet/minecraft/sound/BlockSoundGroup;GRASS:Lnet/minecraft/sound/BlockSoundGroup;",
+                ordinal = 0),
+            to = @At(
+                value = "FIELD",
+                target = "Lnet/minecraft/sound/BlockSoundGroup;GRAVEL:Lnet/minecraft/sound/BlockSoundGroup;",
+                ordinal = 1)),
         allow = 1,
         require = 1)
     private static Block redirectDirt(Block.Settings settings) {
