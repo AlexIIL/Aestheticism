@@ -28,11 +28,14 @@ public class MuddyDirtBlock extends Block {
 
     static {
         IntList positions = new IntArrayList();
-        for (BlockPos p : BlockPos.iterate(-4, -1, -4, 4, 1, 4)) {
+        for (BlockPos p : BlockPos.iterate(-4, -2, -4, 4, 2, 4)) {
             if (BlockPos.ORIGIN.equals(p)) {
                 continue;
             }
             double distance = 1.8 * (Math.sqrt(p.getSquaredDistance(0, 0, 0, false)) - 1);
+            if (p.getY() < 0) {
+                distance *= 2;
+            }
             int value = 7 - (int) distance;
             if (value > 0) {
                 int packed = 0;

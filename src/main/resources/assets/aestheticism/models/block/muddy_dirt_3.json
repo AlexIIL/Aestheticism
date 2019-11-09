@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "aestheticism:block/muddy_dirt_block/side_3"
+    }
+}

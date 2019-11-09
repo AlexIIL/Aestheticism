@@ -8,13 +8,16 @@ import net.minecraft.util.registry.Registry;
 
 import bluesnakemagic.aestheticism.block.MuddyDirtBlock;
 import bluesnakemagic.aestheticism.block.MuddyGrassBlock;
+import bluesnakemagic.aestheticism.block.OrdinaryDirtBlock;
 
 public class AestheticismBlocks {
 
+    public static final OrdinaryDirtBlock ORDINARY_DIRT;
     public static final MuddyDirtBlock MUDDY_DIRT;
     public static final MuddyGrassBlock MUDDY_GRASS;
 
     static {
+        ORDINARY_DIRT = (OrdinaryDirtBlock) Blocks.DIRT;
         MUDDY_DIRT = new MuddyDirtBlock(FabricBlockSettings.copy(Blocks.DIRT).ticksRandomly().build());
         MUDDY_GRASS = new MuddyGrassBlock(FabricBlockSettings.copy(Blocks.GRASS_BLOCK).build());
     }

@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "moisture=7": { "model": "aestheticism:block/muddy_dirt_7" },
+        "moisture=6": { "model": "aestheticism:block/muddy_dirt_6" },
+        "moisture=5": { "model": "aestheticism:block/muddy_dirt_5" },
+        "moisture=4": { "model": "aestheticism:block/muddy_dirt_4" },
+        "moisture=3": { "model": "aestheticism:block/muddy_dirt_3" },
+        "moisture=2": { "model": "aestheticism:block/muddy_dirt_2" },
+        "moisture=1": { "model": "aestheticism:block/muddy_dirt_1" }
+    }
+}

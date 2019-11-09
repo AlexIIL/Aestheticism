@@ -1,23 +1,16 @@
-package bluesnakemagic.aestheticism.mixin.impl;
+package bluesnakemagic.aestheticism.block;
 
 import java.util.Random;
 
-import org.spongepowered.asm.mixin.Mixin;
-
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.GrassBlock;
-import net.minecraft.block.SpreadableBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import bluesnakemagic.aestheticism.AestheticismBlocks;
-import bluesnakemagic.aestheticism.block.MuddyDirtBlock;
 
-@Mixin(GrassBlock.class)
-public abstract class GrassBlockMixin extends SpreadableBlock {
-
-    protected GrassBlockMixin(Settings settings) {
+public class OrdinaryDirtBlock extends Block {
+    public OrdinaryDirtBlock(Block.Settings settings) {
         super(settings);
     }
 
@@ -28,10 +21,10 @@ public abstract class GrassBlockMixin extends SpreadableBlock {
             return;
         }
         state = world.getBlockState(pos);
-        if (state.getBlock() == Blocks.GRASS_BLOCK) {
+        if (state.getBlock() == AestheticismBlocks.ORDINARY_DIRT) {
             double max = MuddyDirtBlock.getMoistness(world, pos);
             if (max > 0) {
-                BlockState newState = AestheticismBlocks.MUDDY_GRASS.getDefaultState();
+                BlockState newState = AestheticismBlocks.MUDDY_DIRT.getDefaultState();
                 newState = newState.with(MuddyDirtBlock.MOISTURE, 1);
                 world.setBlockState(pos, newState, 2);
             }

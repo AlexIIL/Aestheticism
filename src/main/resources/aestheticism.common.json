@@ -3,7 +3,9 @@
     "package": "bluesnakemagic.aestheticism.mixin.impl",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        "GrassBlockMixin"
+        "BlocksMixin",
+        "GrassBlockMixin",
+        "HoeItemAccessor"
     ],
     "injectors": {
         "defaultRequire": 1

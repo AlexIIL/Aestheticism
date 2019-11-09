@@ -15,5 +15,6 @@ public class Aestheticism implements ModInitializer {
     @Override
     public void onInitialize() {
         AestheticismBlocks.load();
+        AestheticismTweaks.load();
     }
 }
